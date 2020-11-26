@@ -10,7 +10,25 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      options: {
+        paths: [
+          "/brand",
+          "/account", // 登录相关
+          "/v3",
+          "/media",
+          "/skyeye", // 新媒介版API
+          "/auth", // 新媒介版后台管理API
+          "/product",
+          "/kol"
+        ],
+        options: {
+          target: "http://old-a.media.radar.datastory.com.cn/",
+          changeOrigin: true,
+          cookieDomainRewrite: ""
+        }
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

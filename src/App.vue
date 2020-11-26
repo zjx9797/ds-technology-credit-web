@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <div>吉雄最帅</div>
+    <div>邹吉雄最帅</div>
     <router-view/>
   </div>
 </template>
